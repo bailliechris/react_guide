@@ -24,7 +24,8 @@ function App() {
 
   // Delete Task
   const deleteTask = async (id) => {
-    const res = await fetch('http://localhost:5000/tasks/${id}',
+    // Use back ticks with expressions ${id}
+    const res = await fetch(`http://localhost:5000/tasks/${id}`,
       {
         method: 'DELETE'
       })
